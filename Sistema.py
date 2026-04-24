@@ -1,36 +1,58 @@
-print("Olá, Mundo\n")
+# Como automatizar a média dos alunos
+# Primeiro realize a estrutura que deseja obter para inserção dos dados.
 
-x = 10
-nome = 'Aluno'
-nota = 8.75
-fez_inscrição = True
+# Insira o nome do Aluno.
+print("Bem-vindos ao Software do Colégio Educa Python\n")
+print("Nesse sistema iremos Calcular a Média das Notas das provas realizadas, verificar os Aprovados e Reprovados juntamente com a necessidade da realização da Prova de Recuperação dos Alunos!\n")
 
-nome = input("Digite um nome:\n")
+# Insira o nome do Aluno.
+nome1 = input("Digite o nome do Aluno:")
+nome2 = input("Digite o nome do Aluno:")
+print()
 
-print(f"\nÓla {nome}, bem-vindo a disciplina de programação. Parabéns pelo seu primeiro Hello World!\n")
+print("Relação de Alunos que realizaram as provas:\n")
+print("Aluno:", nome1)
 
-Nota_1 = int(input("Digite a primeira nota:"))
-Nota_2 = int(input("Digite a segunda nota:"))
-Nota_3 = int(input("Digite a terceira nota:"))
-Nota_4 = int(input("Digite a quarta nota:"))
+print("Aluno:", nome2)
+print()
 
-media = (Nota_1+Nota_2+Nota_3+Nota_4)/4
+# Mensagem de inserção de notas do Aluno para realização da Média.
+print("Digite as notas das provas realizadas pelos Alunos:\n")
 
-arredondar_media = lambda media: round(media, 1)
-media = arredondar_media(media)
+# Insira as notas para o primeiro Aluno.
+Nota_1 = int(input(f"Digite a primeira nota para {nome1}:"))
+Nota_2 = int(input(f"Digite a segunda nota para {nome1}:"))
+Nota_3 = int(input(f"Digite a terceira nota para {nome1}:"))
+Nota_4 = int(input(f"Digite a quarta nota para {nome1}:"))
+print()
+# Insira as notas para o segundo Aluno.
+Nota_5 = int(input(f"Digite a primeira nota para {nome2}:"))
+Nota_6 = int(input(f"Digite a segunda nota para {nome2}:"))
+Nota_7 = int(input(f"Digite a terceira nota para {nome2}:"))
+Nota_8 = int(input(f"Digite a quarta nota para {nome2}:"))
+print()
+# A partir das notas inseridas, calcule a média do Aluno.
+media1 = (Nota_1+Nota_2+Nota_3+Nota_4)/4
+media2 = (Nota_5+Nota_6+Nota_7+Nota_8)/4
 
-if media >= 6:
-  situacao = "Aprovado\n"
+if media1 >= 6:
+  situacao1 = "Aprovado"
 else:
-  situacao = "Reprovado\n"
+  situacao1 = "Reprovado"
 
-print(f"\nA media das notas é: {media}\n")
-print(f"Situação do aluno: {situacao}\n")
+if media2 >= 6:
+  situacao2 = "Aprovado"
+else:
+  situacao2 = "Reprovado"
 
-situacao = "Sim" if media <= 6 else "Não"
-
-print(f"Realizar recuperação: {situacao}")
-
-situacao = "Não desanime, você ainda pode melhorar sua nota!" if media <= 6 else "Parabéns pela dedicação!"
-
-print(situacao)
+# Verificar a média, situação e possível recuperação dos Alunos.
+print(f"A media das notas é: {media1}")
+print(f"Situação do(a) {nome1}: {situacao1}")
+situacao1 = "Sim" if media1 <= 6 else "Não"
+print(f"Realizar recuperação:", situacao1)
+print()
+print(f"A media das notas é: {media2}")
+print(f"Situação do(a) {nome2}: {situacao2}")
+situacao2 = "Sim" if media2 <= 6 else "Não"
+print(f"Realizar recuperação:", situacao2)
+print()
