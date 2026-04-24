@@ -1,129 +1,103 @@
-# README - Sistema de Cadastro e Média Escolar em Python
+# Sistema de Média Escolar
 
-## 📌 Descrição
+## Descrição
 
-Este projeto em Python foi desenvolvido para fins educacionais e demonstra conceitos básicos de programação, como:
+Este projeto é um script em Python que simula um sistema simples de controle escolar. O programa coleta os nomes de dois alunos, recebe quatro notas para cada um, calcula a média final e informa:
 
-* Exibição de mensagens na tela
-* Uso de variáveis
-* Entrada de dados com `input()`
-* Cálculo de média aritmética
-* Estruturas condicionais (`if/else`)
-* Saída formatada com `f-string`
+* Situação do aluno (**Aprovado** ou **Reprovado**)
+* Necessidade de **Recuperação**
 
-O programa solicita o nome do usuário, dá uma mensagem de boas-vindas e depois pede quatro notas para calcular a média final do aluno, informando se ele foi **Aprovado** ou **Reprovado**.
+O objetivo do projeto é praticar conceitos básicos de programação com Python, como:
 
----
-
-## 🚀 Funcionalidades
-
-✅ Exibe mensagem `Hello, World`
-✅ Solicita nome do usuário
-✅ Exibe saudação personalizada
-✅ Solicita 4 notas
-✅ Calcula média final
-✅ Informa situação do aluno
+* Entrada de dados (`input`)
+* Saída de dados (`print`)
+* Variáveis
+* Operações matemáticas
+* Estruturas condicionais (`if` / `else`)
 
 ---
 
-## 🧾 Código
+## Arquivo do Projeto
+
+* `Sistema.py` → código principal do sistema.
+
+---
+
+## Como Executar
+
+### Pré-requisitos
+
+* Python 3 instalado.
+
+### Passos
+
+1. Baixe o arquivo `Sistema.py`.
+2. Abra o terminal na pasta do projeto.
+3. Execute o comando:
+
+```bash
+python Sistema.py
+```
+
+---
+
+## Funcionamento
+
+1. O sistema solicita o nome de dois alunos.
+2. Solicita quatro notas para cada aluno.
+3. Calcula a média de cada aluno:
 
 ```python
-print("Hello, World\n")
-
-x = 10
-nome = 'Aluno'
-nota = 8.75
-fez_inscrição = True
-
-nome = input("Digite um nome:\n")
-
-print(f"\nOlá {nome}, bem-vindo a disciplina de programação. Parabéns pelo seu primeiro Hello World!\n")
-
-Nota_1 = int(input("Digite a primeira nota:"))
-Nota_2 = int(input("Digite a segunda nota:"))
-Nota_3 = int(input("Digite a terceira nota:"))
-Nota_4 = int(input("Digite a quarta nota:"))
-
-media = (Nota_1 + Nota_2 + Nota_3 + Nota_4) / 4
-
-if media >= 6:
-    situacao = "Aprovado"
-else:
-    situacao = "Reprovado"
-
-print(f"\nA média das notas é: {media}")
-print(f"Situação do aluno: {situacao}")
+media = (nota1 + nota2 + nota3 + nota4) / 4
 ```
+
+4. Define a situação:
+
+* Média maior ou igual a `6` → **Aprovado**
+* Média menor que `6` → **Reprovado**
+
+5. Define recuperação:
+
+* Média menor ou igual a `6` → **Sim**
+* Média maior que `6` → **Não**
 
 ---
 
-## ▶️ Como Executar
-
-### 1. Instale o Python
-
-Baixe e instale o Python no site oficial:
-
-https://www.python.org/
-
-### 2. Salve o arquivo
-
-Exemplo:
-
-```bash
-programa.py
-```
-
-### 3. Execute no terminal
-
-```bash
-python programa.py
-```
-
----
-
-## 💻 Exemplo de Uso
+## Exemplo de Uso
 
 ```text
-Hello, World
+Digite o nome do Aluno: João
+Digite o nome do Aluno: Maria
 
-Digite um nome:
-Maria
+Digite a primeira nota para João: 8
+Digite a segunda nota para João: 7
+Digite a terceira nota para João: 9
+Digite a quarta nota para João: 6
+```
 
-Olá Maria, bem-vindo a disciplina de programação.
+Saída esperada:
 
-Digite a primeira nota: 8
-Digite a segunda nota: 7
-Digite a terceira nota: 9
-Digite a quarta nota: 6
-
-A média das notas é: 7.5
-Situação do aluno: Aprovado
+```text
+A media das notas é: 7.5
+Situação do(a) João: Aprovado
+Realizar recuperação: Não
 ```
 
 ---
 
-## 📚 Conceitos Aplicados
+## Melhorias Futuras
 
-* Variáveis e tipos de dados
-* Entrada e saída de dados
-* Conversão com `int()`
-* Operações matemáticas
-* Estrutura condicional
-* Formatação de strings
+Sugestões para evolução do projeto:
 
----
-
-## 🔧 Melhorias Futuras
-
-* Permitir notas decimais (`float`)
+* Permitir cadastrar mais de dois alunos
+* Usar listas e laços de repetição
 * Validar notas entre 0 e 10
-* Repetir cadastro para vários alunos
-* Interface gráfica
-* Armazenamento em arquivo
+* Melhorar organização com funções
+* Exportar resultados para arquivo `.txt` ou `.csv`
+* Criar interface gráfica
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
-Projeto desenvolvido para estudos em lógica de programação com Python.
+Projeto desenvolvido para fins de estudo em Python.
