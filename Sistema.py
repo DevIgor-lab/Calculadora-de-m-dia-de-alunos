@@ -11,7 +11,7 @@ print(f"\nÓla {nome}, bem-vindo a disciplina de programação. Parabéns pelo s
 
 Nota_1 = int(input("Digite a primeira nota:"))
 Nota_2 = int(input("Digite a segunda nota:"))
-Nota_3 =int(input("Digite a terceira nota:"))
+Nota_3 = int(input("Digite a terceira nota:"))
 Nota_4 = int(input("Digite a quarta nota:"))
 
 media = (Nota_1+Nota_2+Nota_3+Nota_4)/4
@@ -26,3 +26,11 @@ else:
 
 print(f"\nA media das notas é: {media}\n")
 print(f"Situação do aluno: {situacao}\n")
+
+situacao = "Sim" if media <= 6 else "Não"
+
+print(f"Realizar recuperação: {situacao}")
+
+situacao = "Não desanime, você ainda pode melhorar sua nota!" if media <= 6 else "Parabéns pela dedicação!"
+
+print(situacao)
