@@ -11,10 +11,13 @@ print(f"\nÓla {nome}, bem-vindo a disciplina de programação. Parabéns pelo s
 
 Nota_1 = int(input("Digite a primeira nota:"))
 Nota_2 = int(input("Digite a segunda nota:"))
-Nota_3 = int(input("Digite a terceira nota:"))
+Nota_3 =int(input("Digite a terceira nota:"))
 Nota_4 = int(input("Digite a quarta nota:"))
 
 media = (Nota_1+Nota_2+Nota_3+Nota_4)/4
+
+arredondar_media = lambda media: round(media, 1)
+media = arredondar_media(media)
 
 if media >= 6:
   situacao = "Aprovado\n"
