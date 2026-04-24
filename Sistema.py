@@ -1,4 +1,4 @@
-print("Hello, World\n")
+print("Olá, Mundo\n")
 
 x = 10
 nome = 'Aluno'
